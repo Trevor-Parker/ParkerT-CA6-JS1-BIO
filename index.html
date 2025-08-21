@@ -12,7 +12,7 @@
   <script>
     let uname = prompt("To continue, please enter your uname: ");
     let amessage = `You have entered: ${uname}`;
-    console.log(amessage + " this is an example of a hardcoded text string concatenated after a variable.");
+      console.log(amessage + " this is an example of a hardcoded text string concatenated after a variable.");
 
     document.getElementById('demo').innerHTML = `Welcome, ${uname}! Let's play Bear, Ninja, Hunter.`;
 
@@ -29,7 +29,7 @@
     const result = boNoH[userChoice][computerChoice];
   
     document.getElementById("demo").innerHTML = `
-      <br><br>You chose: ${userChoice}
+      <br>You chose: ${userChoice}
       <br>Computer chose: ${computerChoice}
       <br><strong>${result}</strong>
     `;
