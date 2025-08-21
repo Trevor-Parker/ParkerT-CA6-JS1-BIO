@@ -9,31 +9,39 @@
 <!-- Defines language, author, title, and encoding -->
 <body>
   <p id="demo">filler/replace</p>
-
+<!-- PlaceHolder for after game -->
   <script>
-    let username = prompt("Welcome to Bear Hunter Ninja! Please enter your name to get started.");
-      console.log("Hi" + username + "Let's Play!!");
-
-    const choices = ["bear", "ninja", "hunter"];
+    let username = prompt("Welcome to Bear Hunter Ninja! Please enter your name to get started");
+    console.log(username);
+    let amessage = "Hi " + username + " Let\'s Play!!";
+    alert(amessage);
+// Lets user choose name and repeats it with a prompt 
+    
+    const options = ["bear", "ninja", "hunter"];
     let userChoice = prompt("Who are you: Bear, Ninja, or Hunter").toLowerCase();
     let computerChoice = "bear";
-
+// Locks Computer choice, defines valid choices, and asks the player for theirs
+    
     const boNoH = {
       bear:     { bear: "It's a tie!", hunter: "You lose!", ninja: "You win!" },
       ninja:    { ninja: "It's a tie!", bear: "You lose!", hunter: "You win!" },
       hunter:   { hunter: "It's a tie!", ninja: "You lose!", bear: "You win!" }
     };
-
+//Prompts depending on different choices
+    
     const result = boNoH[userChoice][computerChoice];
-  
+//Compares user and computer choices from boNoH
+    
     document.getElementById("demo").innerHTML = `
-      <br>You chose: ${userChoice}
-      <br>Computer chose: ${computerChoice}
-      <br><strong>${result}</strong>
+      <br>${username}, You Picked ${userChoice}!
+      <br>The computer picked ${computerChoice}!
     `;
+//Rewites place holder with proviously selected choices
 
-    console.log(`${username} You chose ${userChoice}, The Computer chose ${computerChoice} → ${result}`);
     alert(result);
+    console.log(result);
+//Writes out choices to the screen/webpage
+    
   </script>
 </body>
 </html>
